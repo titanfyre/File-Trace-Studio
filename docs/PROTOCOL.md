@@ -1,0 +1,15 @@
+# Wire contract v1
+
+The public C-compatible structures live in `SDK/FileTrace.h`; the same definitions are consumed by the private driver. Sizes are compile-time asserted: command 16 bytes, event 56 bytes, header 56 bytes, maximum reply 3640 bytes. There are no pointers or variable strings.
+
+The Filter Manager communication port is `\TitanFileTracePort`. Its default Filter Manager security descriptor grants SYSTEM and built-in Administrators; one client can connect. A connection starts inactive. The client sends `FT_COMMAND{1,16,operation,pid}`. Operations are STATUS=1, START=2, STOP=3, READ=4. START requires a nonzero existing PID; all other commands require PID=0. Unexpected lengths, versions, opcodes and payloads are rejected.
+
+The driver copies the command once into an aligned local structure inside exception protection. The reply is assembled from zeroed memory outside user storage and copied back under exception protection. At most four concurrent message callbacks can allocate reply storage. Message/session lifetime is guarded by rundown; disconnect cannot leave a delayed START active. These design properties still require actual signed-driver verification.
+
+Header fields: version, actual response size, count, ring capacity=1024, selected PID (zero=inactive), number of in-flight completion contexts (maximum256), dropped observations, QPC frequency, capture epoch, next completion sequence. START/STOP advance epoch and reset the bounded queue/counters; old completion contexts release their storage but cannot enter a new epoch. STOP and disconnect discard unread events; drain with READ before stopping if they are needed.
+
+READ removes up to64 records limited by the supplied output size; STATUS/START/STOP return a zero-record header. Completion sequence can have gaps after ring overflow. Ring overflow drops new observations while allowing the filesystem operation to proceed normally. Allocation failure similarly omits only the observation. The driver never uses user buffers from a file operation and never includes file data.
+
+An event contains sequence, start QPC, interval QPC, requested bytes, successful bytes, requesting PID, signed NTSTATUS, major operation, IRP/FastIO flags and a zero reserved field. Major codes CREATE=0, READ=3, WRITE=4, SET_INFORMATION=6, CLEANUP=18. Non-success or non-read/write completions contain zero transferred bytes. Events are ordered by completion, so start timestamps can be out of order. Convert interval ticks as `ticks * 1,000,000 / frequency` in floating point; timer resolution does not establish measurement accuracy or attribution.
+
+No subscriber notification is implemented. The GUI's worker drains ready batches, waits20ms when empty and yields1ms after32 consecutive non-empty batches. These user-mode waits affect display/collection cadence; they are not waits in the filesystem path. The 100ms screen refresh is separate from the recorded QPC intervals. Any backlog or lost observations is visible through the status counter.

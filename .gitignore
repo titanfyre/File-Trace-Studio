@@ -1,0 +1,13 @@
+/obj/
+/bin/
+/.vs/
+*.user
+*.zip
+*.log
+*.pdb
+*.exe
+*.lib
+*.sys
+*.inf
+*.cat
+*.cab

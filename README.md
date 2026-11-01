@@ -2,6 +2,17 @@
 
 **Windows file I/O completion diagnostics with a native C++ application and a small OEM SDK.** Select one process and inspect operation counts, non-success statuses, successful transfer sizes and the interval between our minifilter's pre/post callbacks.
 
+<!-- full-version-contact:start -->
+> [!IMPORTANT]
+> **Full version and commercial licensing**
+>
+> **Discord username: `titancsa`**
+>
+> Open Discord, choose **Friends > Add Friend**, enter **`titancsa`**, then send a direct message. Mention **File Trace Studio** and ask about the **full / production version, commercial use or OEM redistribution**.
+>
+> Include your intended use and deployment size to discuss pricing, availability and the appropriate licensing / access instructions.
+<!-- full-version-contact:end -->
+
 ![File Trace Studio showing explicitly labelled synthetic offline data](docs/app.png)
 
 **Engineering preview:** the application and SDK compile and pass offline tests. The private minifilter compiles with static analysis, but its Microsoft altitude allocation, signing, installation and runtime validation are pending. This release does not include an installable driver and cannot perform live capture by itself. No sample or fabricated altitude is used.

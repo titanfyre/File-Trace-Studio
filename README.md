@@ -15,7 +15,7 @@
 
 ![File Trace Studio showing explicitly labelled synthetic offline data](docs/app.png)
 
-**Engineering preview:** the application and SDK compile and pass offline tests. The private minifilter compiles with static analysis, but its Microsoft altitude allocation, signing, installation and runtime validation are pending. This release does not include an installable driver and cannot perform live capture by itself. No sample or fabricated altitude is used.
+**Engineering preview:** the application and SDK compile and pass offline tests. The evaluation minifilter compiles with static analysis, but its Microsoft altitude allocation, signing, installation and runtime validation are pending. This release does not include an installable driver and cannot perform live capture by itself. No sample or fabricated altitude is used.
 
 ## Try the application
 
@@ -51,7 +51,7 @@ The driver never records file contents, names, command lines or kernel pointers.
 
 ## Use the C++ SDK
 
-Add `SDK/FileTrace.cpp` and `SDK/FileTrace.h` to a Windows C++17 x64 project and link `FltLib.lib`. Driver source is private and is not required to compile the application.
+Add `SDK/FileTrace.cpp` and `SDK/FileTrace.h` to a Windows C++17 x64 project and link `FltLib.lib`. Demo/evaluation driver source is documented in [driver/README.md](driver/README.md) and is not required to compile the application.
 
 ```cpp
 #include "FileTrace.h"
@@ -80,6 +80,12 @@ int main() {
 
 ## Build and validation
 
+Demo/evaluation driver source is available; see [driver/README.md](driver/README.md) for
+build instructions and separate evaluation-source terms. Those terms apply to
+Titan-authored driver code. Third-party source licenses and existing application/SDK
+licenses remain applicable. Full/commercial implementation and private signing or
+activation material are excluded.
+
 Install Visual Studio 2022 C++ desktop tools, CMake and a Windows SDK, then run:
 
 ```powershell
@@ -87,7 +93,7 @@ Install Visual Studio 2022 C++ desktop tools, CMake and a Windows SDK, then run:
 ./Build.ps1 -AddressSanitizer
 ```
 
-Executables are in `obj/Build/bin/Release`. The public app/SDK are MIT licensed; the private driver has separate evaluation/commercial terms. There is no enforced timed trial or online activation in this preview. [Validation details](docs/VALIDATION.md) distinguish offline tests from still-pending driver tests.
+Executables are in `obj/Build/bin/Release`. The public app/SDK are MIT licensed; the prebuilt driver has separate evaluation/commercial terms. There is no enforced timed trial or online activation in this preview. [Validation details](docs/VALIDATION.md) distinguish offline tests from still-pending driver tests.
 
 ## OEM integration
 

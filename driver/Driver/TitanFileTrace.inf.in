@@ -1,0 +1,47 @@
+; TEMPLATE ONLY. Build.ps1 requires a genuine allocated altitude before producing an INF.
+[Version]
+Signature="$Windows NT$"
+Class=ActivityMonitor
+ClassGuid={B86DFF51-A31E-4BAC-B3CF-E8CFE75C9FC2}
+Provider=%Provider%
+DriverVer=10/24/2026,0.1.0.0
+CatalogFile=TitanFileTrace.cat
+PnpLockdown=1
+
+[DestinationDirs]
+DriverFiles=13
+[DefaultInstall.NTamd64.10.0...19041]
+CopyFiles=DriverFiles
+[DefaultInstall.NTamd64.10.0...19041.Services]
+AddService=TitanFileTrace,,Service
+[DefaultInstall.NTamd64.10.0...19041.HW]
+[DriverFiles]
+TitanFileTrace.sys
+[SourceDisksNames]
+1=%Disk%
+[SourceDisksFiles]
+TitanFileTrace.sys=1
+[Service]
+DisplayName=%Description%
+ServiceBinary=%13%\TitanFileTrace.sys
+Dependencies=FltMgr
+ServiceType=2
+StartType=3
+ErrorControl=1
+LoadOrderGroup="FSFilter Activity Monitor"
+AddReg=Settings
+[Settings]
+; Observation remains transparent to offload read/write, query-open and BypassIO.
+HKR,"Parameters","SupportedFeatures",0x00010001,0x0000000F
+HKR,"Parameters\Instances","DefaultInstance",0x00000000,"TitanFileTrace Instance"
+HKR,"Parameters\Instances\TitanFileTrace Instance","Altitude",0x00000000,"__ALLOCATED_ALTITUDE__"
+HKR,"Parameters\Instances\TitanFileTrace Instance","Flags",0x00010001,0
+; Downlevel Filter Manager instance layout, for Windows 10 and pre-24H2 Windows 11.
+HKR,"Instances","DefaultInstance",0x00000000,"TitanFileTrace Instance"
+HKR,"Instances\TitanFileTrace Instance","Altitude",0x00000000,"__ALLOCATED_ALTITUDE__"
+HKR,"Instances\TitanFileTrace Instance","Flags",0x00010001,0
+HKR,,"SupportedFeatures",0x00010001,0x0000000F
+[Strings]
+Provider="Titanfyre"
+Description="Titan File Trace Studio - observational minifilter"
+Disk="Titan File Trace Studio installation media"

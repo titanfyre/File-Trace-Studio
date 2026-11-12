@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemDefinitionGroup>
+    <ClCompile><AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)sdk;$(MSBuildThisFileDirectory)sdk\SDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories><PreprocessorDefinitions>;UNICODE;_UNICODE;NOMINMAX;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions><AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions></ClCompile>
+    <Link><AdditionalDependencies>comdlg32.lib;fltlib.lib;gdi32.lib;shell32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies></Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sdk\SDK\FileTrace.cpp"><ObjectFileName>$(IntDir)TitanFileTraceStudio_%(Filename).obj</ObjectFileName></ClCompile>
+  </ItemGroup>
+</Project>

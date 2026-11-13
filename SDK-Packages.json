@@ -203,7 +203,7 @@
       "api_prefix": "file_trace_studio_json_"
     },
     "JavaScript/npm": {
-      "status": "awaiting_browser_publication_authentication",
+      "status": "registry_publication_requires_action",
       "name": "file-trace-studio",
       "version": "1.0.0",
       "directory": "File-Trace-Studio-JavaScript-npm",

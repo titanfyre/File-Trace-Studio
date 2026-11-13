@@ -5,21 +5,21 @@ Current source layout and registry coverage. A GitHub download is distinct from 
 | Target | Status | Package / documentation |
 | --- | --- | --- |
 | CPP/vcpkg | published_custom_registry | file-trace-studio |
-| CPP/conan | public_recipe_builds_locally |  |
+| CPP/conan | public_recipe_builds_locally |  [Source](packaging/native/) |
 | CPP/nuget | paused_pending_owner_email_confirmation | File-Trace-Studio.Native |
-| NET/nuget | binding_not_implemented |  |
-| Python/pypi | binding_not_implemented |  |
-| Python/conda-forge | binding_not_implemented |  |
-| Rust/cargo | binding_not_implemented |  |
-| JavaScript/npm | binding_not_implemented |  |
-| Java/maven | binding_not_implemented |  |
-| Java/jitpack | binding_not_implemented |  |
-| Go/modules | binding_not_implemented |  |
-| Go/pkg-go-dev | binding_not_implemented |  |
-| PowerShell/gallery | binding_not_implemented |  |
-| Dart/pub-dev | binding_not_implemented |  |
-| Ruby/rubygems | binding_not_implemented |  |
-| PHP/packagist | binding_not_implemented |  |
+| NET/nuget | built_verified_publication_on_hold_by_owner | FileTraceStudio.SDK [Source](File-Trace-Studio-NET-nuget/) |
+| Python/pypi | built_fixture_and_production_verified | file-trace-studio [Source](File-Trace-Studio-Python-pypi/) |
+| Python/conda-forge | built_tested_requires_source_publication_and_official_review | file-trace-studio [Source](packaging/conda/) |
+| Rust/cargo | published_install_verified | [file-trace-studio](https://crates.io/crates/file-trace-studio) [Source](File-Trace-Studio-Rust-cargo/) |
+| JavaScript/npm | awaiting_browser_publication_authentication | [file-trace-studio](https://www.npmjs.com/package/file-trace-studio) [Source](File-Trace-Studio-JavaScript-npm/) |
+| Java/maven | published_install_verified | [file-trace-studio](https://central.sonatype.com/artifact/io.github.titancsa/file-trace-studio/1.0.0) [Source](File-Trace-Studio-Java-maven/) |
+| Java/jitpack | published_install_verified | [file-trace-studio](https://jitpack.io/#titanfyre/File-Trace-Studio/java-sdk-v1.0.0) [Source](File-Trace-Studio-Java-maven/) |
+| Go/modules | published_install_verified | [file-trace-studio](https://pkg.go.dev/github.com/titanfyre/File-Trace-Studio/File-Trace-Studio-Go-modules@v1.0.0) [Source](File-Trace-Studio-Go-modules/) |
+| Go/pkg-go-dev | indexed_verified | [Documentation](https://pkg.go.dev/github.com/titanfyre/File-Trace-Studio/File-Trace-Studio-Go-modules@v1.0.0) |
+| PowerShell/gallery | published_install_verified | [FileTraceStudio](https://www.powershellgallery.com/packages/FileTraceStudio/1.0.0) [Source](File-Trace-Studio-PowerShell-gallery/) |
+| Dart/pub-dev | built_fixture_and_production_verified | file_trace_studio [Source](File-Trace-Studio-Dart-pub-dev/) |
+| Ruby/rubygems | published_install_verified | [file-trace-studio](https://rubygems.org/gems/file-trace-studio) [Source](File-Trace-Studio-Ruby-rubygems/) |
+| PHP/packagist | composer_source_and_tag_published | [titancsa/file-trace-studio](https://packagist.org/packages/titancsa/file-trace-studio) |
 
 Native SDK source and CMake/Conan/vcpkg/NuGet recipes share [`packaging/native`](packaging/native/LAYOUT.md). Previous release archives and tags remain unchanged.
 

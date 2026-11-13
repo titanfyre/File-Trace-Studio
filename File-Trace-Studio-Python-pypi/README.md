@@ -1,0 +1,13 @@
+# File-Trace-Studio Python SDK
+
+`pip install file-trace-studio`
+
+Windows x64 Python3.10+. No driver is installed by this package.
+
+```python
+from file_trace_studio import Client
+with Client() as client:
+    info = client.call("status")
+```
+
+[Operation schema and API](docs/API.md). Check errors and the product licensing state before device creation.

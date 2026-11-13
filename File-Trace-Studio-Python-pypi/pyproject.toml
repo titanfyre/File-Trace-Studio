@@ -1,0 +1,18 @@
+[build-system]
+requires=["setuptools>=77","wheel>=0.43"]
+build-backend="setuptools.build_meta"
+[project]
+name="file-trace-studio"
+version="1.0.0"
+description="Windows x64 File-Trace-Studio direct SDK"
+requires-python=">=3.10"
+license="MIT"
+readme="README.md"
+[project.urls]
+Repository="https://github.com/titanfyre/File-Trace-Studio"
+[tool.setuptools]
+packages=["file_trace_studio"]
+[tool.setuptools.package-data]
+file_trace_studio=["*.dll"]
+[tool.setuptools.data-files]
+"share/file-trace-studio/docs"=["docs/*","LICENSE"]

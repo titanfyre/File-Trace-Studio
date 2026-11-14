@@ -239,14 +239,14 @@
       "api_prefix": "file_trace_studio_json_"
     },
     "Dart/pub-dev": {
-      "status": "built_fixture_and_production_verified",
+      "status": "published_install_verified",
       "name": "file_trace_studio",
       "version": "1.0.0",
       "directory": "File-Trace-Studio-Dart-pub-dev",
-      "registry_published": false,
+      "registry_published": true,
       "documentation_bundled": true,
-      "url": null,
-      "public_consumer_verified": false,
+      "url": "https://pub.dev/packages/file_trace_studio",
+      "public_consumer_verified": true,
       "module": "file_trace_studio",
       "dll_name": "FileTraceStudioJsonSDK.dll",
       "api_prefix": "file_trace_studio_json_"

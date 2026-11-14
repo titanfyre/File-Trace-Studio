@@ -123,7 +123,7 @@ Les sources, licences, guides API et exemples sont regroupes dans [le depot SDK 
 | Go Modules | `github.com/titanfyre/File-Trace-Studio/File-Trace-Studio-Go-modules` | `go get github.com/titanfyre/File-Trace-Studio/File-Trace-Studio-Go-modules@v1.0.0` |
 | pkg.go.dev | `github.com/titanfyre/File-Trace-Studio/File-Trace-Studio-Go-modules` | `Documentation : https://pkg.go.dev/github.com/titanfyre/File-Trace-Studio/File-Trace-Studio-Go-modules@v1.0.0` |
 | PowerShell Gallery | `file_trace_studio` | `Install-Module FileTraceStudio -RequiredVersion 1.0.0 -Scope CurrentUser` |
-| pub.dev | `file_trace_studio` | Commande prevue apres publication : `dart pub add file_trace_studio:1.0.0` |
+| pub.dev | `file_trace_studio` | `dart pub add file_trace_studio:1.0.0` |
 | RubyGems | `file_trace_studio` | `gem install file-trace-studio -v 1.0.0` |
 | Packagist | `file_trace_studio` | Commande prevue apres publication : `composer require titancsa/file-trace-studio:1.0.0` |
 

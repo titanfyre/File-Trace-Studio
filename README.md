@@ -103,18 +103,18 @@ Les sources, licences, guides API et exemples sont regroupes dans [le depot SDK 
 | Conan | `file-trace-studio` | `conan install --requires=file-trace-studio/0.1.0 -r titancsa --build=missing -s compiler.cppstd=17` |
 | NuGet | `File-Trace-Studio.Native` | `Install-Package File-Trace-Studio.Native -Version 0.1.0` |
 | NuGet | `FileTraceStudio.SDK` | `dotnet add package FileTraceStudio.SDK --version 1.0.0` |
-| PyPI | `file_trace_studio` | Commande prevue apres publication : `python -m pip install file-trace-studio==1.0.0` |
+| PyPI | `file-trace-studio` | Commande prevue apres publication : `python -m pip install file-trace-studio==1.0.0` |
 | Conda | `file-trace-studio` | `conda install --override-channels -c https://raw.githubusercontent.com/TitanCSA/sdk-packages/089bc73095aa8eda89bacbe10d0b9e58394b0207/conda-channel -c conda-forge file-trace-studio` (canal TitanCSA) |
-| crates.io | `file_trace_studio` | `cargo add file-trace-studio@1.0.0` |
-| npm | `file_trace_studio` | Commande prevue apres publication : `npm install file-trace-studio@1.0.0` |
+| crates.io | `file-trace-studio` | `cargo add file-trace-studio@1.0.0` |
+| npm | `file-trace-studio` | Commande prevue apres publication : `npm install file-trace-studio@1.0.0` |
 | Maven Central | `io.github.titancsa:file-trace-studio` | `io.github.titancsa:file-trace-studio:1.0.0 (pom.xml / Gradle)` |
 | JitPack | `com.github.titanfyre:File-Trace-Studio` | `com.github.titanfyre:File-Trace-Studio:java-sdk-v1.0.0 (avec le depot JitPack)` |
 | Go Modules | `github.com/titanfyre/File-Trace-Studio/File-Trace-Studio-Go-modules` | `go get github.com/titanfyre/File-Trace-Studio/File-Trace-Studio-Go-modules@v1.0.0` |
 | pkg.go.dev | `github.com/titanfyre/File-Trace-Studio/File-Trace-Studio-Go-modules` | `Documentation : https://pkg.go.dev/github.com/titanfyre/File-Trace-Studio/File-Trace-Studio-Go-modules@v1.0.0` |
-| PowerShell Gallery | `file_trace_studio` | `Install-Module FileTraceStudio -RequiredVersion 1.0.0 -Scope CurrentUser` |
+| PowerShell Gallery | `FileTraceStudio` | `Install-Module FileTraceStudio -RequiredVersion 1.0.0 -Scope CurrentUser` |
 | pub.dev | `file_trace_studio` | `dart pub add file_trace_studio:1.0.0` |
-| RubyGems | `file_trace_studio` | `gem install file-trace-studio -v 1.0.0` |
-| Packagist | `file_trace_studio` | Commande prevue apres publication : `composer require titancsa/file-trace-studio:1.0.0` |
+| RubyGems | `file-trace-studio` | `gem install file-trace-studio -v 1.0.0` |
+| Packagist | `titancsa/file-trace-studio` | Commande prevue apres publication : `composer require titancsa/file-trace-studio:1.0.0` |
 
 Pour vcpkg et Conan, configure d abord le registre TitanCSA avec [le guide complet](https://github.com/TitanCSA/sdk-packages/tree/main/projects/File-Trace-Studio/README.md). Le guide explique aussi Maven/Gradle, les prerequis et le chargement des DLL. Les pilotes/applications du produit sont installes separement. Les commandes marquees prevues ne sont pas encore disponibles.
 

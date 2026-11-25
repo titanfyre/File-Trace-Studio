@@ -1,5 +1,11 @@
 # File Trace Studio
 
+<!-- simple-start:start -->
+Explore which Windows programs read or write files.
+
+**Start here.** Start with the preview. The live driver still needs signing and tests.
+<!-- simple-start:end -->
+
 <!-- full-version-contact:start -->
 > [!IMPORTANT]
 > **Full version and commercial licensing**
@@ -133,5 +139,3 @@ Les anciens imports Go et versions JitPack gardent leurs tags. Pour les ancienne
 <!-- central-sdk-packages:end -->
 
 ## Commercial integration and support
-
-
